@@ -1,0 +1,26 @@
+server:
+  port: 9090
+  #如果使用properties写法如下：
+  #server.port=9900
+  #如果yml和properties同时存在，properties文件的优先级更高。
+
+third:
+  weather:
+    url: https://www.baidu.com
+    port: 8080
+    username: test
+    cities:
+      - 北京
+      - 上海
+      - 广州
+    list[0]: aaa
+    list[1]: bbb
+    list[2]: ccc
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot_learning
+    username: root
+    password: 1111
