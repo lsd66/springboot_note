@@ -1,0 +1,43 @@
+server:
+  port: 9090
+  #如果使用properties写法如下：
+  #server.port=9900
+  #如果yml和properties同时存在，properties文件的优先级更高。
+
+third:
+  weather:
+    url: https://www.baidu.com
+    port: 8080
+    username: test
+    cities:
+      - 北京
+      - 上海
+      - 广州
+    list[0]: aaa
+    list[1]: bbb
+    list[2]: ccc
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot_learning
+    username: root
+    password: 1111
+  jpa:
+    spring:
+      datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/springboot_learning?serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+        username: root
+        password: root
+      jpa:
+        show-sql: true # 默认false，在日志里显示执行的sql语句
+        database: mysql
+        database-platform: org.hibernate.dialect.MySQL8Dialect
+        hibernate:
+          ddl-auto: update #指定为update，每次启动项目检测表结构有变化的时候会新增字段，表不存在时会 新建，如果指定create，则每次启动项目都会清空数据并删除表，再新建
+          naming:
+            #指定jpa的自动表生成策略，驼峰自动映射为下划线格式7
+            implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+            #physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
