@@ -39,3 +39,6 @@ spring:
   devtools:
     restart:
       enable: true
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
