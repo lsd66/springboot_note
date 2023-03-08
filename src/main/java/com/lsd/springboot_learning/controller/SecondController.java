@@ -1,7 +1,5 @@
 package com.lsd.springboot_learning.controller;
 
-import com.lsd.springboot_learning.base.Result;
-import com.lsd.springboot_learning.vo.User;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

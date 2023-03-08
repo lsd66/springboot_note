@@ -2,7 +2,6 @@ package com.lsd.springboot_learning.controller;
 
 import com.lsd.springboot_learning.base.ResultCode;
 import com.lsd.springboot_learning.exception.BizException;
-import com.lsd.springboot_learning.vo.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
